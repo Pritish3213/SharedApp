@@ -1,0 +1,15 @@
+
+<flexboxlayout>
+        <StackLayout class="form" [class.dark]="!isLoggingIn" [formGroup]="add_editteamform">
+                <Label text="Team"></Label>
+                <TextField hint="Team" class="input-field" autocorrect="false"
+                        autocapitalizationType="none" formControlName="team_name"></TextField>
+                <Label text="Amount"></Label>
+                <TextField hint="Amount"  formControlName="amount"></TextField>
+
+                <button text="Add" (tap)="addteam(add_editteamform.value)" class="btn"></button>
+
+        </StackLayout>
+</flexboxlayout>
+
+

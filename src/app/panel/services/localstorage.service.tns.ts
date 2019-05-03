@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LocalstorageService {
+  userdata: any;
+
+  constructor() { }
+      
+  
+  localstore(Token){
+    require( "nativescript-localstorage" );
+    localStorage.setItem('accessToken', Token);
+    // console.log(localStorage.getItem('accessToken'));
+}
+}
